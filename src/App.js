@@ -1,7 +1,7 @@
 import './App.css';
 import PagesManager from "./components/PagesManager";
 
-function App() {
+const App = () => {
   return (
     <PagesManager />
   );

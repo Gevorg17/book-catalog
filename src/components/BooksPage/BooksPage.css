@@ -1,0 +1,30 @@
+.add-button {
+    background-color: white;
+    margin-left: 100px;
+    margin-top: 50px;
+    height: 30px;
+    border: 1px solid #f69a73;
+}
+
+.add-button span {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #00c3ff;
+}
+
+.add-button:hover {
+    background-color: #00c3ff;
+    border-width: 0;
+}
+
+.add-button:hover span {
+    color: white;
+}
+
+.add-button:hover .plus {
+    color: white;
+}
+
+.plus {
+    color: #00c3ff;
+}

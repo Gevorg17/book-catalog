@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
 
-function Header() {
+const Header = () => {
     return (
         <div>
             <header className="header">
