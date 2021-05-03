@@ -1,0 +1,30 @@
+.button {
+    background-color: white;
+    margin-left: 100px;
+    margin-top: 50px;
+    height: 30px;
+    border: 1px solid #f69a73;
+}
+
+.button span {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #00c3ff;
+}
+
+.button:hover {
+    background-color: #00c3ff;
+    border-width: 0;
+}
+
+.button:hover span {
+    color: white;
+}
+
+.button:hover .icon {
+    color: white;
+}
+
+.icon {
+    color: #00c3ff;
+}

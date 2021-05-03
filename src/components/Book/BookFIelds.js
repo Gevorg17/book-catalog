@@ -1,19 +1,20 @@
 export const info = (book) => {
-    const fields = require("../../book.json")
+    const fields = require("../../static/book.json")
+    console.log(book)
     return (
         <div>
             {createInfoField(fields.NAME, book.name)}
-            {createInfoField(fields.AUTHOR, book.authors)}
+            {createInfoField(fields.AUTHORS, book.authors)}
             {createInfoField(fields.RELEASE_YEAR, book.releaseYear)}
             {createInfoField(fields.ISBN, book.ISBN)}
         </div>
     )
 }
 
-const createInfoField = (name, value) => {
+const createInfoField = (text, value) => {
     return (
         <div>
-            <span>{name}: </span>
+            <span>{text}: </span>
             <input value={value} readOnly/>
         </div>
     )

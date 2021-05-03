@@ -1,18 +1,21 @@
-import {books} from "../../info";
 import Book from "../Book/Book";
+import * as mobx from "mobx";
+import {observer} from "mobx-react-lite";
+import booksStore from "../../store/booksStore";
+import "./BooksList.css"
 
-const BooksList = () => {
-    const booksList = books.map((book, index) => {
+const BooksList = observer(() => {
+    const booksList = mobx.toJS(booksStore.getBooks).map((book) => {
         return (
-            <Book key={index} book = {book} />
+            <Book key={book.id} id={book.id} book = {book} />
         )
     })
 
     return (
-        <div>
+        <div className="books-list">
             {booksList}
         </div>
     );
-}
+})
 
 export default BooksList;

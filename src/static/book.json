@@ -1,6 +1,6 @@
 {
-  "NAME": "Имя",
-  "AUTHOR": "Автор",
+  "NAME": "Название",
+  "AUTHORS": "Авторы",
   "RELEASE_YEAR": "Год издания",
   "ISBN": "ISBN",
   "ISBN_VALIDATION": ""
