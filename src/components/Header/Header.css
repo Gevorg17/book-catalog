@@ -38,12 +38,24 @@
   align-items: center;
 }
 
-a {
+.link-button {
   font-size: 18px;
   color: white;
   text-decoration: none;
+  border: 0;
+  background-color: Transparent;
+}
+
+.link-button:hover {
+  cursor: grab;
 }
 
 .icon {
   margin-right: 20px;
+}
+
+.username {
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
 }

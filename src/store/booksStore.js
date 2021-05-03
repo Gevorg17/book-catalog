@@ -1,6 +1,5 @@
 import {makeAutoObservable, runInAction} from "mobx";
 import { firestore, collections } from "../db";
-// import collections from "../static/collections.json"
 
 class BooksStore {
     booksList = [];
