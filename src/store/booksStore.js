@@ -29,7 +29,6 @@ class BooksStore {
     }
 
     get getBooks() {
-        console.log("Hi")
         return this.booksList;
 
     }

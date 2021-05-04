@@ -1,6 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faPlus, faWindowClose} from '@fortawesome/free-solid-svg-icons'
+import {faWindowClose} from '@fortawesome/free-solid-svg-icons'
 import "./AuthModal.css"
 import auth from "../../store/authStore"
 import {observer} from "mobx-react-lite";

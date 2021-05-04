@@ -1,7 +1,9 @@
-const ADD = "add";
-const EDIT = "edit";
-const SIGN_IN = "Sign In"
-const SIGN_UP = "Sign Up"
-const DEFAULT = "default";
+const actions = {
+    ADD: "add",
+    EDIT: "edit",
+    SIGN_IN: "Sign In",
+    SIGN_UP: "Sign Up",
+    DEFAULT: "default"
+}
 
-export default {ADD, EDIT, DEFAULT, SIGN_IN, SIGN_UP};
+export default actions;

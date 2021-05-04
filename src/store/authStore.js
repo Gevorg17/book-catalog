@@ -30,13 +30,17 @@ class AuthStore {
         if (exists.empty) {
             alert("Invalid username or password!")
         } else {
-            this.currentUserName = login;
+            runInAction(() => {
+                this.currentUserName = login;
+            })
             sessionStorage.setItem('currentUser', this.currentUserName);
         }
     }
 
     signOut = async () => {
-        this.currentUserName = null;
+        runInAction(() => {
+            this.currentUserName = null;
+        })
         sessionStorage.removeItem('currentUser');
     }
 }
