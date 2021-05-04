@@ -26,7 +26,8 @@ const createField = (text, name, value) => {
                    onChange={handleChange} name={name} defaultValue={value ? value : ''}
                    type={name === properties.RELEASE_YEAR ? "number" : "text"}
                    max={name === properties.RELEASE_YEAR ? 2021 : ''}
-                   min={name === properties.RELEASE_YEAR ? 1900 : ''}/>
+                   min={name === properties.RELEASE_YEAR ? 1900 : ''}
+                   required/>
         </div>
     )
 

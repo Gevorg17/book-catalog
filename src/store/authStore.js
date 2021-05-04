@@ -5,8 +5,13 @@ import actions from "../static/actions"
 class AuthStore {
     constructor() {
         makeAutoObservable(this);
+        if (localStorage.getItem('currentUser')) {
+            this.currentUserName = localStorage.getItem('currentUser');
+            this.isAuthenticated = true;
+        }
     }
 
+    isAuthenticated = false;
     currentUserName = null;
     active = false;
     action = actions.DEFAULT;
@@ -32,16 +37,18 @@ class AuthStore {
         } else {
             runInAction(() => {
                 this.currentUserName = login;
+                this.isAuthenticated = true;
             })
-            sessionStorage.setItem('currentUser', this.currentUserName);
+            localStorage.setItem('currentUser', this.currentUserName);
         }
     }
 
     signOut = async () => {
         runInAction(() => {
             this.currentUserName = null;
+            this.isAuthenticated = false;
         })
-        sessionStorage.removeItem('currentUser');
+        localStorage.removeItem('currentUser');
     }
 }
 

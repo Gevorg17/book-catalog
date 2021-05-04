@@ -1,6 +1,5 @@
 export const info = (book) => {
     const fields = require("../../static/book.json")
-    console.log(book)
     return (
         <div>
             {createInfoField(fields.NAME, book.name)}

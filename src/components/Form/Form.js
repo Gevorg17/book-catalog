@@ -22,17 +22,16 @@ const Form = (props) => {
 
         let formToSend = mobx.toJS(form.formInfo);
 
-        if (formToSend.name && formToSend.authors && formToSend.releaseYear && formToSend.ISBN) {
-            if (form.action === actions.ADD) {
-                booksStore.addBook(formToSend);
-            } else if (form.action === actions.EDIT) {
-                booksStore.updateBook(mobx.toJS(form.bookToEdit).id, formToSend);
-            }
+        console.log(formToSend);
 
-            props.history.push("/catalog");
-        } else {
-            alert("Заполните форму!")
+        if (form.action === actions.ADD) {
+            booksStore.addBook(formToSend);
+        } else if (form.action === actions.EDIT) {
+            booksStore.updateBook(mobx.toJS(form.bookToEdit).id, formToSend);
         }
+
+        form.formInfo = {};
+        props.history.push("/catalog");
     }
 
     return (

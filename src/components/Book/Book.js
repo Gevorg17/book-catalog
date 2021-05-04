@@ -24,7 +24,7 @@ const Book = (props) => {
     }
 
     return (
-        <div className="form-inner">
+        <div className="form-inner book-block">
             {bookFields}
             <div>
                 <button onClick={handleEdit} className="button edit-button">

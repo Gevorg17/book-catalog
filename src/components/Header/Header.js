@@ -8,7 +8,7 @@ import {observer} from "mobx-react-lite";
 
 const Header = observer(() => {
     let user = () => {
-        if (!auth.currentUserName) {
+        if (!auth.isAuthenticated) {
             return (
                 <>
                     <button onClick={() => auth.setActive(true, actions.SIGN_IN)} className="link-button">Войти</button>
